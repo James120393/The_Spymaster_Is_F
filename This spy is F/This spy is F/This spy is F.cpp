@@ -15,6 +15,7 @@
 int lineSpeed = 1000;
 bool girl = false;
 bool guiness = false;
+int alcohol = 0;
 
 int shoprob()
 {
@@ -32,13 +33,13 @@ int shoprob()
 		char c; //declare c to be of type char
 		std::cin >> c;
 		std::cout << "Dead";
-		return -1;
+		system("exit");
 
 	}
 }
 
 
-int shop(int alcohol)
+int shop()
 {
 	while (true)
 	{
@@ -74,13 +75,13 @@ int shop(int alcohol)
 			Sleep(lineSpeed);
 			std::cout << "Stukof shoots the cashier and runs, The guards having heard a gunshot lay chase in a rather half assed fashion. You make a mental note to never imply anything ever again.\n";
 			shoprob();
-			return -1;
+			system("exit");
 		}
 	}
 }
 
-/*
-int marketVendor(int alcohol)
+
+int marketVendor()
 {
 	while (true)
 	{
@@ -153,7 +154,7 @@ int marketVendor(int alcohol)
 		}
 	}
 }
-int oldman(int alcohol)
+int oldman()
 {
 	while (true)
 	{
@@ -194,12 +195,12 @@ int oldman(int alcohol)
 			Sleep(lineSpeed);
 			std::cout << "Stukof goes back\n";
 			//generalp(alcohol);
-			return -1;
+			system("exit");
 		}
 	}
 }
 
-int stables(int alcohol)
+int stables()
 {
 	while (true)
 	{
@@ -213,99 +214,30 @@ int stables(int alcohol)
 		Sleep(lineSpeed);
 		std::cout << "Stukof: Have a stroke of its…\n";
 		std::cout << "Player: Don’t even try it!!\n";
-		generalp(alcohol);
-		return -1;
-
-
+		return 0;
+		break;
 	}
 }
 
-//int guard(int alcohol)
+int guard()
 {
 	while (true)
 	{
 		std::cout << "Stukof approaches the guard\n";
-		Sleep(lineSpeed);
-		std::cout << "Guard:.........?\n";
-		Sleep(lineSpeed);
-		std::cout << "Stukof:.........?\n";
-		Sleep(lineSpeed);
-		std::cout << "Guard:.........?\n";
-		Sleep(lineSpeed);
-		std::cout << "Stukof:.........?\n";
-		Sleep(lineSpeed);
-		std::cout << "Guard:.........?\n";
-		Sleep(lineSpeed);
-		std::cout << "Stukof:.........?\n";
-		Sleep(lineSpeed);
-		std::cout << "Guard:.........?\n";
-		Sleep(lineSpeed);
-		std::cout << "Stukof:.........?\n";
-		Sleep(lineSpeed);
-		std::cout << "Guard:.........?\n";
-		Sleep(lineSpeed);
-		std::cout << "Stukof:.........?\n";
-		Sleep(lineSpeed);
-		std::cout << "Guard:.........?\n";
-		Sleep(lineSpeed);
-		std::cout << "Stukof:.........?\n";
-		Sleep(lineSpeed);
-		std::cout << "Guard:.........?\n";
-		Sleep(lineSpeed);
-		std::cout << "Stukof:.........?\n";
-		Sleep(lineSpeed);
-		std::cout << "Guard:.........?\n";
-		Sleep(lineSpeed);
-		std::cout << "Stukof:.........?\n";
-		Sleep(lineSpeed);
-		std::cout << "Guard:.........?\n";
-		Sleep(lineSpeed);
-		std::cout << "Stukof:.........?\n";
-		Sleep(lineSpeed);
-		std::cout << "Guard:.........?\n";
-		Sleep(lineSpeed);
-		std::cout << "Stukof:.........?\n";
-		Sleep(lineSpeed);
-		std::cout << "Guard:.........?\n";
-		Sleep(lineSpeed);
-		std::cout << "Stukof:.........?\n";
-		Sleep(lineSpeed);
-		std::cout << "Guard:.........?\n";
-		Sleep(lineSpeed);
-		std::cout << "Stukof:.........?\n";
-		Sleep(lineSpeed);
-		std::cout << "Guard:.........?\n";
-		Sleep(lineSpeed);
-		std::cout << "Stukof:.........?\n";
-		Sleep(lineSpeed);
-		std::cout << "Guard:.........?\n";
-		Sleep(lineSpeed);
-		std::cout << "Stukof:.........?\n";
-		Sleep(lineSpeed);
-		std::cout << "Guard:.........?\n";
-		Sleep(lineSpeed);
-		std::cout << "Stukof:.........?\n";
-		Sleep(lineSpeed);
-		std::cout << "Guard:.........?\n";
-		Sleep(lineSpeed);
-		std::cout << "Stukof:.........?\n";
-		Sleep(lineSpeed);
-		std::cout << "Guard:.........?\n";
-		Sleep(lineSpeed);
-		std::cout << "Stukof:.........?\n";
-		Sleep(lineSpeed);
-		std::cout << "Guard:.........?\n";
-		Sleep(lineSpeed);
-		std::cout << "Stukof:.........?\n";
-		Sleep(lineSpeed);
+		for (int i = 0; i < 7; i++)
+		{
+			Sleep(lineSpeed);
+			std::cout << "Guard:.........?\n";
+			Sleep(lineSpeed);
+			std::cout << "Stukof:.........?\n";
+		}
 		std::cout << "Stukof Walks away because its been too long between staring at each other \n?";
-		generalp(alcohol);
-		return -1;
-
+		return 0;
+		break;
 	}
 }
 
-//int generalp(int alcohol)
+int generalp()
 {
 	while (true)
 	{
@@ -323,24 +255,24 @@ int stables(int alcohol)
 		switch (toupper(c))
 		{
 		case '1':
-			oldman(alcohol);
+			oldman();
 			break;
 		case '2':
-			stables(alcohol);
+			stables();
 			break;
 
 		case '3':
-			marketVendor(alcohol);
+			marketVendor();
 			break;
 		case '4':
-			guard(alcohol);
+			guard();
 			break;
 		}
 	}
 }
-*/
 
-int opening(int alcohol)
+
+int opening()
 {
 	while (true)
 	{
@@ -368,12 +300,12 @@ int opening(int alcohol)
 
 		case '3':
 			std::cout << "Stukof pulls a Makarov from his trenchcoat, puts it to his head and shouts MOTHER RUSSIA! and pulls the trigger";
-			return -1;
+			system("exit");
 		}
 	}
 }
 
-int patrol(int alcohol)
+int patrol()
 {
 	while (true)
 	{
@@ -414,18 +346,18 @@ int patrol(int alcohol)
 		case '2':
 			Sleep(lineSpeed);
 			std::cout << "STUKOF: (Avoids...)\n";
-			return alcohol;
+			system("exit");
 
 		case '3':
 			Sleep(lineSpeed);
 			std::cout << "STUKOF: (Dies...)\n";
-			return -1;
+			system("exit");
 		}
 	}
 }
 
 
-/*int example(int alcohol)
+/*int example()
 {
 	while (true)
 	{
@@ -451,7 +383,7 @@ int patrol(int alcohol)
 	}
 }*/
 
-int bar(int alcohol)
+int bar()
 {
 	while (true)
 	{
@@ -487,40 +419,40 @@ int bar(int alcohol)
 				std::cin >> c;
 				if (toupper(c) == 'Y')
 				{
-					return -1;
+					system("exit");
 				}
 				else
 				{
 					std::cout << "Player “How you became a spy I have no idea”\nGuards approach Stukof and arrest him finding out he’s the spy they’re looking for, Stukof spends his remaining days in tough welsh jails getting his anal cavities ruptured by a guy named Jesse.";
 				}
-				return -1;
+				system("exit");
 			case '2':
 				std::cout << "Stukof “Can I have a pint of guinness please ? ”\nBartender “Sure”\nBartender fills a pint and gives it to him\n*Guinness get*";
 				guiness = true;
 
 			case '3':
 				std::cout << "(Puts on a perfect welsh accent) “Gentlemen how about a pint?”\nGuards “We’re not really supposed”\nStukof “its on me, cmon!”\nGuards “sure, why not 1 drink no one will know”\nAfter the second pint with the guards getting him more and more drunk he decides to go\n to the bathroom \nStukov : “Im going to the toilet gentlemen”\nSlightly drunk Guards “AHHHHHHH BREAKING THE SEAL!!!!”\nStukof : “Bladder of a little girl AHAHAHAHA”\nGuards return the laughter\nStukov goes to the toilet into a cubical & throws up, throwing up activated Stukofs hidden\n genius, he had something hes never had before something that could change his life\n forever, AN IDEA.Stukov made an advanced camera from his shoe lace, the speaker from his\n dead phone and the metal handle from the toilet.He wraps the so called wire around his chest\n while plastd::cing the device on the centre, the camera would be disguised as a button on his coat.\n He walks back outside and asks each individual by their full name if they wanted another drink\n normally this would be suspicious but theyre drunk so they dont care.As they leave the bar he\n asks the guards if they can escort him out of the town, if they ask for security checks he\nthreatens them with the recorded tape of them drinking while on duty.They comply and escort him.\nGAME WON";
-				return -1;
+				system("exit");
 			
 			case '4':
 				if (guiness == true)
 				{
 					std::cout << "Stukof Shoots everyone and himself\nDEAD";
-					return -1;
+					system("exit");
 				}
 			
 			case '5':
 				if (guiness == true)
 				{
 					std::cout << "Stukof tells the “Horse walks into a bar Joke” to the bartender\nStukof “Want to hear a joke ? ”\nBartender “Errrr Sure, why not”\nStukof “Sad Horse walks into a bar, the barman says why the long face”\nBartender “.......”\nBartender pulls the shotgun from under the bar and shoots him.\n";
-					return -1;
+					system("exit");
 				}
 
 			case '6':
 				if (alcohol >= 1 && guiness == true)
 				{
 					std::cout << "Stukof:”Hello pretty lady”\nGirl : ”Hey there handsome, hows about you buy a lady a drink”\nPlayer”Stukof, this could be our ticket out of here, quick get her to leave with you”\nStukof replies to both : ”Not a problem”\nStukof and the girl end up having a wonderful evening eventually leaving the bar and going out of\ntown.\nMISSION ACCOMPLISHED";
-					return -1;
+					system("exit");
 				}
 				
 		}
@@ -531,13 +463,7 @@ int main()
 {
 	system("Title This Spy is Fu**ed");
 	int alcohol = 0;
-	alcohol = opening(alcohol);
-
-	if (alcohol == -1)
-	{
-		system("PAUSE");
-		return 0;
-	}
+	opening();
 
 	while (true)
 	{
@@ -556,27 +482,22 @@ int main()
 		{
 		case '1':
 			//bar scenario
-			alcohol = bar(alcohol);
+			bar();
 			break;
 		case '2':
 			//shop scenario
-			alcohol = shop(alcohol);
+			shop();
 			break;
 
 		case '3':
 			//patrolling scenario
-			alcohol = patrol(alcohol);
+			patrol();
 			break;
 		
 		case '4':
 			//street scenario
-			//generalp();
+			generalp();
 			break;
-		}
-		if (alcohol == -1)
-		{
-			system("PAUSE");
-			return 0;
 		}
 	}
 
